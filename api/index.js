@@ -5,7 +5,7 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 mongoose.connect(process.env.MONGO).then(() => {
-    console.log('MnogoDb database is connected')
+    console.log('MongoDb database is connected')
 }).catch((err) => {
     console.log(err)
 })
