@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 const DashSidebar = () => {
   const location = useLocation();
   const [tab, setTab] = useState();
+
   useEffect(() => {
     const urlParams = new URLSearchParams(location.search);
     const tabFromUrl = urlParams.get("tab");
@@ -21,6 +22,7 @@ const DashSidebar = () => {
               icon={HiUser}
               label={"User"}
               labelColor="dark"
+              as="div"
             >
               Profile
             </Sidebar.Item>
