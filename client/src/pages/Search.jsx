@@ -18,10 +18,12 @@ const Search = () => {
   useEffect(() => {
     const urlParams = new URLSearchParams(location.search);
     const searchTermFromUrl = urlParams.get("searchTerm");
-    if (searchTermFromUrl) {
+    const categoryFromUrl = urlParams.get("category");
+    if (searchTermFromUrl || categoryFromUrl) {
       setSideBarData({
         ...sideBarData,
         searchTerm: searchTermFromUrl,
+        category: categoryFromUrl,
       });
     }
     const fetchPosts = async () => {

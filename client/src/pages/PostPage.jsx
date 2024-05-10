@@ -51,8 +51,6 @@ const PostPage = () => {
     }
   }, []);
 
-  console.log(recentPosts);
-
   if (loading)
     return (
       <div className="flex justify-center items-center min-h-screen">
@@ -65,7 +63,7 @@ const PostPage = () => {
         {post && post.title}
       </h1>
       <Link
-        to={`/search?category=${post && post.category}`}
+        to={`/search?category=${post && post.category}&searchTerm=`}
         className="self-center mt-5"
       >
         <Button color="gray" pill size="xs">
