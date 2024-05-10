@@ -8,7 +8,7 @@ import {
 } from "../redux/user/userSlice";
 import { useDispatch, useSelector } from "react-redux";
 import QAuth from "../components/QAuth";
-  
+
 const SignIn = () => {
   const [formData, setFormData] = useState({});
   const { loading, error } = useSelector((state) => state.user);
@@ -44,8 +44,6 @@ const SignIn = () => {
     }
   };
 
-  console.log(formData);
-  console.log(loading);
   return (
     <div className="min-h-screen mt-20">
       <div className="flex p-3 max-w-3xl mx-auto flex-col md:flex-row md:items-center gap-5">
